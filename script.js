@@ -10,14 +10,37 @@ async function getFilmes(buscar){
 
     container.innerHTML += `
     <img src="${data['Poster']}" alt="">
+
     <h1 style="
-    left: 80px;
+    left: 380px;
     text-transform: uppercase;
+    width: 700px;
+    height: 30px;
+    font-size: 25px;
+    position: fixed;
     ">${data['Title']}</h1>
-    <p><strong>Duração: </strong>${data['Runtime']}</p>
-    <p><strong>Ano: </strong>${data['Year']}</p>
-    <p><strong>Diretor: </strong>${data['Director']}</p>
-    <p><strong>Gênero: </strong>${data['Genre']}</p>
+
+    <p style="
+    position:relative;
+    top:350px;
+    left:90px;">
+    <strong>Duração: </strong>${data['Runtime']}</p>
+
+    <p style="
+    position:relative;
+    top:350px;
+    left:90px;"><strong>Ano: </strong>${data['Year']}</p>
+
+    <p style="
+    position:relative;
+    top:350px;
+    left:90px;"><strong>Diretor: </strong>${data['Director']}</p>
+
+    <p style="
+    position:relative;
+    top:350px;
+    left:90px;"><strong>Gênero: </strong>${data['Genre']}</p>
+
     <p style="
     width: 800px;
     position: relative;
