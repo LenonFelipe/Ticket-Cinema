@@ -7,6 +7,16 @@
     text-decoration: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+html{
+    overflow: hidden;
+    background: var(--background);
+    color: #fff;
+}
+:root {
+    --background: #1B1B1B ;
+    --button-color: #595f39 ;
+    --second-button-color: #3d4127 ;
+  }
 
 .navbar{
     display: flex;
@@ -18,26 +28,27 @@
 
 .navbar button{
     width:100%;
-    background: rgb(146, 146, 219);
+    background: var(--button-color);
     color: #fff; 
     border: none;
     border-radius: 5px;
     padding: 5px;
 }
 
-.navbar button:hover{
-    background: rgb(127, 127, 189);
+.navbar button:hover, .buy:hover{
+    background: var(--second-button-color);
+    cursor: pointer;
 }
 
 .navbar input{
     width: 100%;
     border-radius: 5px;
-    border:rgb(146, 146, 219) 1px solid;
+    border:var(--button-color) 1px solid;
     padding: 5px;
 }
 
 .navbar input:focus{
-    border:rgb(146, 146, 219) 1px solid;
+    border:var(--button-color) 1px solid;
     outline: none;
 }
 .container{
@@ -52,4 +63,20 @@ img{
     height: 400px;
     width: 280px;
     border-radius: 5px;
+}
+.buy{
+    display:none;
+    position: fixed;
+    top:540px;
+    left: 380px;
+    background: var(--button-color);
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.buyButton{
+    text-decoration: none;
+    color: #fff;
 }

@@ -1,6 +1,8 @@
 let container = document.querySelector('.container')
 let formulario = document.querySelector('.formulario')
 let pesquisa = document.querySelector('.form')
+let comprar = document.querySelector('.buy')
+
 
 async function getFilmes(buscar){
     let request = await fetch(`https://www.omdbapi.com/?t=${buscar}&plot=full&apikey=b2332d31`)
@@ -22,32 +24,33 @@ async function getFilmes(buscar){
 
     <p style="
     position:relative;
-    top:350px;
-    left:90px;">
+    top:280px;
+    left:80px;">
     <strong>Duração: </strong>${data['Runtime']}</p>
 
     <p style="
     position:relative;
-    top:350px;
+    top:280px;
     left:90px;"><strong>Ano: </strong>${data['Year']}</p>
 
     <p style="
     position:relative;
-    top:350px;
+    top:280px;
     left:90px;"><strong>Diretor: </strong>${data['Director']}</p>
 
     <p style="
     position:relative;
-    top:350px;
+    top:280px;
     left:90px;"><strong>Gênero: </strong>${data['Genre']}</p>
 
     <p style="
+    color: #C4C5BA;
     width: 800px;
     position: relative;
     left: 380px;
-    top: -370px;"><strong>Sinopse: </strong> ${data['Plot']}</p>
+    top: -370px;
+    font-size: 14px;"><strong>Sinopse: </strong> ${data['Plot']}</p>
     `
-
 }
 
 formulario.addEventListener('submit', function(e){
@@ -56,3 +59,7 @@ formulario.addEventListener('submit', function(e){
     getFilmes(pesquisa.value)
     pesquisa.value = '' 
 })
+
+function comprarIngresso(){
+    comprar.style.display = 'block';
+}
