@@ -1,7 +1,7 @@
-let container = document.querySelector('.container')
-let formulario = document.querySelector('.formulario')
-let pesquisa = document.querySelector('.form')
-let comprar = document.querySelector('.buy')
+const container = document.querySelector('.container')
+const formulario = document.querySelector('.formulario')
+const pesquisa = document.querySelector('.form')
+const botaoComprar = document.querySelector('.buy')
 
 
 async function getFilmes(buscar){
@@ -60,6 +60,7 @@ formulario.addEventListener('submit', function(e){
     pesquisa.value = '' 
 })
 
-function comprarIngresso(){
-    comprar.style.display = 'block';
+function botaoIngresso(){
+    botaoComprar.style.display = 'block';
 }
+
