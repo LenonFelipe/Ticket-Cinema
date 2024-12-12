@@ -32,18 +32,6 @@ columns.forEach((col) => {
   });
 });
 
-// Adicionar o botão de desmarcar todos os assentos
-const clearSelectionButton = document.createElement('button');
-clearSelectionButton.textContent = 'Desmarcar Todos os Assentos';
-clearSelectionButton.classList.add('clear-selection');
-document.body.appendChild(clearSelectionButton);
 
-// Evento para desmarcar todos os assentos
-clearSelectionButton.addEventListener('click', () => {
-  const selectedSeats = seatingArea.querySelectorAll('.seat.selected'); // Selecionar todos os assentos marcados
-  selectedSeats.forEach((seat) => {
-    seat.classList.remove('selected'); // Remover a classe 'selected'
-  });
-  total = 0; // Resetar o total
-  totalDisplay.textContent = total.toFixed(2); // Atualizar o total no display
-});
+
+

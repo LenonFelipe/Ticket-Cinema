@@ -21,14 +21,15 @@ html{
   position: relative;
 }
 .seating-area {
-  left: 400px;
+  top: -20px;
+  left: 450px;
   display:flex;
-  width: 500px;
+  width: 450px;
   height: 400px;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 10px;
 }
 .seat {
   width: 75px;
@@ -44,9 +45,30 @@ html{
   color: white;
 }
 h1{
-    left:20px;
+    left: 50px;
     top: 40px;
 }
 p{
+    left: 920px;
+    top: -210px;
     font-size: 30px;
+}
+.buyAll{
+    position: relative;
+    left: 920px;
+    top: -190px;
+    background: var(--button-color);
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.buyAll:hover{
+    cursor: pointer;
+    background: var(--second-button-color);
+}
+a{
+  text-decoration: none;
+  color: #fff;
 }
